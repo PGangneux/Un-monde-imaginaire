@@ -114,10 +114,17 @@ struct monde* init_world(struct monde* m, int nb_proc, int pid) {
 
 
 void niveau1(struct monde* m){
-    // les habitants de chaque île prennet tous un ans
+    // les habitants de chaque île prennent tous un ans
+    // si un habitant a 18 ans, ont initialise son revenu
     for (int i = 0; i < m->nb_iles; i++){
         for (int j = 0; j < m->mes_iles[i]->nb_hab; j++){
-            m->mes_iles[i]->liste_hab[j]->age +=1;
+            habitant* h = m->mes_iles[i]->liste_hab[j];
+            // habitant prend un ans
+            h->age +=1;
+            // si un habitant a 18 ans, ont initialise son revenu
+            if (h->age == 18){
+                h->revenu = 1000 + rand() % 9001;
+            }
         }
     }
 
@@ -152,6 +159,9 @@ int main(int argc, char* argv[]) {
     int nb_proc, pid;
     MPI_Comm_size(MPI_COMM_WORLD, &nb_proc);
     MPI_Comm_rank(MPI_COMM_WORLD, &pid);
+
+    // Initialisation du générateur de nombres aléatoires avec une graine différente pour chaque processus
+    srand(time(NULL) + pid);
 
     struct monde* mm = generation("monde2.txt");
     struct monde* sous_monde = init_world(mm, nb_proc, pid);
