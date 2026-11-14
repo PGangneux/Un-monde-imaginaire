@@ -8,6 +8,7 @@ void affichage_ile(struct ile* ile) {
         cout << endl;
     }
     cout << "inflation : " << ile->inflation << endl;
+    cout << "indice de Gini : " << ile->gini << endl;
 }
 
 void affichage_monde(struct monde* m) {

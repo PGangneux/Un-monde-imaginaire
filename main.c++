@@ -125,11 +125,22 @@ struct monde* init_world(struct monde* m, int nb_proc, int pid) {
 
 
 void niveau1(struct monde* m){
+
+
     for (int i = 0; i < m->nb_iles; i++){
         ile* ile = m->mes_iles[i];
+        double somme_revenus = 0;
+        double somme_diff_absolues = 0;
 
         for (int j = 0; j < m->mes_iles[i]->nb_hab; j++){
             habitant* h = ile->liste_hab[j];
+
+            // pré-calcul pour la mise à jour de l'indice de Gini
+            somme_revenus += h->revenu; // ajout ri
+            for (int k = 0; k < m->mes_iles[i]->nb_hab; k++){
+                habitant* h2 = ile->liste_hab[k];
+                somme_diff_absolues += fabs(h->revenu - h2->revenu); // ajout |ri - rj|
+            }
 
 
             // habitant prend un ans
@@ -145,6 +156,13 @@ void niveau1(struct monde* m){
             if (h->age == 18){
                 h->revenu = 1000 + rand() % 9001;
             }
+        }
+
+        // Calcul de l'indice de Gini pour l'île (av maj salires)
+        if (somme_revenus != 0){
+            ile->gini = somme_diff_absolues / (2 * ile->nb_hab * somme_revenus);
+        } else {
+            ile->gini = 0; // évite la division par zéro
         }
 
 
@@ -218,7 +236,7 @@ int main(int argc, char* argv[]) {
     // Initialisation du générateur de nombres aléatoires avec une graine différente pour chaque processus
     srand(time(NULL) + pid);
 
-    struct monde* mm = generation("monde1.txt");
+    struct monde* mm = generation("monde2.txt");
     struct monde* sous_monde = init_world(mm, nb_proc, pid);
     
     show(pid, nb_proc, sous_monde);
