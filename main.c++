@@ -123,10 +123,24 @@ int main(int argc, char* argv[]) {
     struct monde* mm = generation("monde1.txt");
     struct monde* sous_monde = init_world(mm, nb_proc, pid);
 
-    srand(time(nullptr) + pid); // aleatoire différente seed selon processus
+    for (int p = 0; p < nb_proc; p++) {
 
-    cout << "--- Affichage par le processus " << pid << " ---" << endl;
-    affichage_monde(sous_monde);
+        MPI_Barrier(MPI_COMM_WORLD);
+
+        if (pid == p) {
+            cout << "\n====================================" << endl;
+            cout << "       PROCESSUS " << pid << endl;
+            cout << "====================================" << endl;
+
+            affichage_monde(sous_monde);
+
+            cout << "Fin du processus " << pid << endl;
+            cout << endl;
+            cout.flush();
+        }
+    }
+
+    MPI_Barrier(MPI_COMM_WORLD);
 
     liberer_monde(&sous_monde);
     liberer_monde(&mm);
