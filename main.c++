@@ -113,16 +113,21 @@ struct monde* init_world(struct monde* m, int nb_proc, int pid) {
 }
 
 
+void niveau1(struct monde* m){
+    // les habitants de chaque île prennet tous un ans
+    for (int i = 0; i < m->nb_iles; i++){
+        for (int j = 0; j < m->mes_iles[i]->nb_hab; j++){
+            m->mes_iles[i]->liste_hab[j]->age +=1;
+        }
+    }
 
-int main(int argc, char* argv[]) {
-    MPI_Init(&argc, &argv);
-    int nb_proc, pid;
-    MPI_Comm_size(MPI_COMM_WORLD, &nb_proc);
-    MPI_Comm_rank(MPI_COMM_WORLD, &pid);
 
-    struct monde* mm = generation("monde1.txt");
-    struct monde* sous_monde = init_world(mm, nb_proc, pid);
 
+}
+
+
+
+void show(int pid, int nb_proc, struct monde* m) {
     for (int p = 0; p < nb_proc; p++) {
 
         MPI_Barrier(MPI_COMM_WORLD);
@@ -132,15 +137,45 @@ int main(int argc, char* argv[]) {
             cout << "       PROCESSUS " << pid << endl;
             cout << "====================================" << endl;
 
-            affichage_monde(sous_monde);
+            affichage_monde(m);
 
             cout << "Fin du processus " << pid << endl;
             cout << endl;
             cout.flush();
         }
     }
+}
+
+
+int main(int argc, char* argv[]) {
+    MPI_Init(&argc, &argv);
+    int nb_proc, pid;
+    MPI_Comm_size(MPI_COMM_WORLD, &nb_proc);
+    MPI_Comm_rank(MPI_COMM_WORLD, &pid);
+
+    struct monde* mm = generation("monde2.txt");
+    struct monde* sous_monde = init_world(mm, nb_proc, pid);
+    
+    show(pid, nb_proc, sous_monde);
 
     MPI_Barrier(MPI_COMM_WORLD);
+
+    for (int i = 0; i < 5; i++) {
+        niveau1(sous_monde);
+        
+        cout << "\n====================================" << endl;
+        cout << "       PROCESSUS " << pid << " itération: " << i << endl;
+        cout << "====================================" << endl;
+
+        show(pid, nb_proc, sous_monde);
+        MPI_Barrier(MPI_COMM_WORLD);
+    }
+
+
+
+
+
+
 
     liberer_monde(&sous_monde);
     liberer_monde(&mm);
