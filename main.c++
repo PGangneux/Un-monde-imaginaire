@@ -121,6 +121,12 @@ void niveau1(struct monde* m){
             habitant* h = m->mes_iles[i]->liste_hab[j];
             // habitant prend un ans
             h->age +=1;
+
+            // idexation du salaires en fonction de l'inflation de l'île
+            double inflation = m->mes_iles[i]->inflation; // en pourcentage
+            h->revenu *= (1 + inflation/100.0);
+
+
             // si un habitant a 18 ans, ont initialise son revenu
             if (h->age == 18){
                 h->revenu = 1000 + rand() % 9001;

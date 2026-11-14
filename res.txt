@@ -1,31 +1,30 @@
-mpicxx -Wall -Wextra -std=c++11 -g -fsanitize=address -c main.c++ -o main.o
-mpicxx -Wall -Wextra -std=c++11 -g -fsanitize=address -o simulation main.o monde.o
 mpirun -np 4 ./simulation 0
 
 ====================================
        PROCESSUS 0
 ====================================
 1 iles dans ce monde :
-taa->20 habitants : taa_0 	42 ans 	(8402€)
-taa_1 	44 ans 	(5923€)
-taa_2 	83 ans 	(3725€)
-taa_3 	20 ans 	(1024€)
-taa_4 	17 ans 	(0€)
-taa_5 	98 ans 	(7215€)
-taa_6 	31 ans 	(4252€)
-taa_7 	39 ans 	(7557€)
-taa_8 	73 ans 	(1896€)
-taa_9 	35 ans 	(7301€)
-taa_10 	45 ans 	(2072€)
-taa_11 	92 ans 	(7101€)
-taa_12 	77 ans 	(6778€)
-taa_13 	42 ans 	(4766€)
-taa_14 	90 ans 	(8901€)
-taa_15 	37 ans 	(9201€)
-taa_16 	43 ans 	(6279€)
-taa_17 	36 ans 	(6182€)
-taa_18 	58 ans 	(7305€)
-taa_19 	36 ans 	(7793€)
+taa->20 habitants : taa_0 	41 ans 	(2814€)
+taa_1 	33 ans 	(8488€)
+taa_2 	90 ans 	(6540€)
+taa_3 	50 ans 	(9276€)
+taa_4 	51 ans 	(3749€)
+taa_5 	76 ans 	(6977€)
+taa_6 	93 ans 	(8287€)
+taa_7 	93 ans 	(2964€)
+taa_8 	99 ans 	(1419€)
+taa_9 	14 ans 	(0€)
+taa_10 	6 ans 	(0€)
+taa_11 	79 ans 	(1907€)
+taa_12 	60 ans 	(2137€)
+taa_13 	34 ans 	(7465€)
+taa_14 	24 ans 	(8197€)
+taa_15 	23 ans 	(7120€)
+taa_16 	39 ans 	(3973€)
+taa_17 	61 ans 	(4113€)
+taa_18 	78 ans 	(6685€)
+taa_19 	83 ans 	(3291€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 0
@@ -35,59 +34,70 @@ Fin du processus 0
        PROCESSUS 1
 ====================================
 1 iles dans ce monde :
-fas->10 habitants : fas_0 	86 ans 	(3653€)
-fas_1 	67 ans 	(7271€)
-fas_2 	19 ans 	(3739€)
-fas_3 	15 ans 	(0€)
-fas_4 	69 ans 	(2790€)
-fas_5 	41 ans 	(2933€)
-fas_6 	33 ans 	(2795€)
-fas_7 	65 ans 	(6940€)
-fas_8 	77 ans 	(3286€)
-fas_9 	43 ans 	(1406€)
+fas->10 habitants : fas_0 	19 ans 	(6437€)
+fas_1 	27 ans 	(8021€)
+fas_2 	100 ans 	(8922€)
+fas_3 	29 ans 	(8464€)
+fas_4 	100 ans 	(3329€)
+fas_5 	91 ans 	(7987€)
+fas_6 	36 ans 	(4290€)
+fas_7 	14 ans 	(0€)
+fas_8 	86 ans 	(2398€)
+fas_9 	57 ans 	(4028€)
+inflation : -0.372549%
 connectivité : 
+
+====================================
 0 
 Fin du processus 1
 
-
-====================================
        PROCESSUS 2
 ====================================
 1 iles dans ce monde :
-bop->5 habitants : bop_0 	11 ans 	(0€)
-bop_1 	93 ans 	(4712€)
-bop_2 	62 ans 	(1043€)
-bop_3 	50 ans 	(8253€)
-bop_4 	34 ans 	(1886€)
+
+====================================
+bop->5 habitants : bop_0 	31 ans 	(1682€)
+bop_1 	80 ans 	(1694€)
+bop_2 	31 ans 	(2022€)
+bop_3 	37 ans 	(2686€)
+bop_4 	64 ans 	(9431€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 2
 
-
-====================================
        PROCESSUS 3
 ====================================
 1 iles dans ce monde :
-mig->18 habitants : mig_0 	14 ans 	(0€)
-mig_1 	42 ans 	(4031€)
-mig_2 	51 ans 	(9556€)
-mig_3 	63 ans 	(6631€)
-mig_4 	41 ans 	(4791€)
-mig_5 	56 ans 	(2736€)
-mig_6 	65 ans 	(5452€)
-mig_7 	41 ans 	(7617€)
-mig_8 	88 ans 	(1752€)
-mig_9 	51 ans 	(1251€)
-mig_10 	59 ans 	(6130€)
-mig_11 	26 ans 	(3289€)
-mig_12 	25 ans 	(3003€)
-mig_13 	24 ans 	(7265€)
-mig_14 	73 ans 	(7313€)
-mig_15 	87 ans 	(1973€)
-mig_16 	69 ans 	(2066€)
-mig_17 	90 ans 	(4490€)
+mig->18 habitants : mig_0 	49 ans 	(4441€)
+mig_1 	63 ans 	(7621€)
+mig_2 	6 ans 	(0€)
+mig_3 	44 ans 	(2349€)
+mig_4 	16 ans 	(0€)
+mig_5 	79 ans 	(2368€)
+mig_6 	66 ans 	(7092€)
+mig_7 	51 ans 	(4426€)
+mig_8 	79 ans 	(3448€)
+mig_9 	97 ans 	(4103€)
+mig_10 	23 ans 	(8619€)
+mig_11 	65 ans 	(1547€)
+mig_12 	78 ans 	(8316€)
+mig_13 	51 ans 	(2351€)
+mig_14 	54 ans 	(4056€)
+mig_15 	2 ans 	(0€)
+mig_16 	77 ans 	(8314€)
+mig_17 	2 ans 	(0€)
+inflation : -0.372549%
 connectivité : 
 0 
+
+====================================
+       PROCESSUS 1 itération: 0
+====================================
+
+====================================
+       PROCESSUS 2 itération: 0
+====================================
 Fin du processus 3
 
 
@@ -103,53 +113,47 @@ Fin du processus 3
        PROCESSUS 0
 ====================================
 1 iles dans ce monde :
-taa->20 habitants : taa_0 	43 ans 	(8402€)
-taa_1 	45 ans 	(5923€)
-taa_2 	84 ans 	(3725€)
-
-====================================
-       PROCESSUS 1 itération: 0
-====================================
-
-====================================
-       PROCESSUS 2 itération: 0
-====================================
-taa_3 	21 ans 	(1024€)
-taa_4 	18 ans 	(6220€)
-taa_5 	99 ans 	(7215€)
-taa_6 	32 ans 	(4252€)
-taa_7 	40 ans 	(7557€)
+taa->20 habitants : taa_0 	42 ans 	(2803.52€)
+taa_1 	34 ans 	(8456.38€)
+taa_2 	91 ans 	(6515.64€)
+taa_3 	51 ans 	(9241.44€)
+taa_4 	52 ans 	(3735.03€)
+taa_5 	77 ans 	(6951.01€)
+taa_6 	94 ans 	(8256.13€)
+taa_7 	94 ans 	(2952.96€)
+taa_8 	100 ans 	(1413.71€)
+taa_9 	15 ans 	(0€)
+taa_10 	7 ans 	(0€)
+taa_11 	80 ans 	(1899.9€)
+taa_12 	61 ans 	(2129.04€)
+taa_13 	35 ans 	(7437.19€)
+taa_14 	25 ans 	(8166.46€)
+taa_15 	24 ans 	(7093.47€)
+taa_16 	40 ans 	(3958.2€)
+taa_17 	62 ans 	(4097.68€)
+taa_18 	79 ans 	(6660.1€)
+taa_19 	84 ans 	(3278.74€)
+inflation : -0.372549%
 
 ====================================
        PROCESSUS 1
 ====================================
-1 iles dans ce monde :
-fas->10 habitants : fas_0 	87 ans 	(3653€)
-taa_8 	74 ans 	(1896€)
-taa_9 	36 ans 	(7301€)
-taa_10 	46 ans 	(2072€)
-taa_11 	93 ans 	(7101€)
-taa_12 	78 ans 	(6778€)
-taa_13 	43 ans 	(4766€)
-taa_14 	91 ans 	(8901€)
-taa_15 	38 ans 	(9201€)
-taa_16 	44 ans 	(6279€)
-taa_17 	37 ans 	(6182€)
-taa_18 	59 ans 	(7305€)
-taa_19 	37 ans 	(7793€)
 connectivité : 
 0 
 Fin du processus 0
 
-fas_1 	68 ans 	(7271€)
-fas_2 	20 ans 	(3739€)
-fas_3 	16 ans 	(0€)
-fas_4 	70 ans 	(2790€)
-fas_5 	42 ans 	(2933€)
-fas_6 	34 ans 	(2795€)
-fas_7 	66 ans 	(6940€)
-fas_8 	78 ans 	(3286€)
-fas_9 	44 ans 	(1406€)
+1 iles dans ce monde :
+fas->10 habitants : fas_0 	20 ans 	(6413.02€)
+fas_1 	28 ans 	(7991.12€)
+fas_2 	101 ans 	(8888.76€)
+fas_3 	30 ans 	(8432.47€)
+fas_4 	101 ans 	(3316.6€)
+fas_5 	92 ans 	(7957.24€)
+fas_6 	37 ans 	(4274.02€)
+fas_7 	15 ans 	(0€)
+fas_8 	87 ans 	(2389.07€)
+fas_9 	58 ans 	(4012.99€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 1
@@ -159,45 +163,44 @@ Fin du processus 1
        PROCESSUS 2
 ====================================
 1 iles dans ce monde :
-bop->5 habitants : bop_0 	12 ans 	(0€)
-bop_1 	94 ans 	(4712€)
-bop_2 	63 ans 	(1043€)
-bop_3 	51 ans 	(8253€)
-bop_4 	35 ans 	(1886€)
+bop->5 habitants : bop_0 	32 ans 	(1675.73€)
+bop_1 	81 ans 	(1687.69€)
+bop_2 	32 ans 	(2014.47€)
+bop_3 	38 ans 	(2675.99€)
+bop_4 	65 ans 	(9395.87€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 2
+
 
 ====================================
        PROCESSUS 3
 ====================================
 1 iles dans ce monde :
-mig->18 habitants : mig_0 	15 ans 	(0€)
-mig_1 	43 ans 	(4031€)
-mig_2 	52 ans 	(9556€)
-mig_3 	64 ans 	(6631€)
-mig_4 	42 ans 	(4791€)
-
-mig_5 	57 ans 	(2736€)
-mig_6 	66 ans 	(5452€)
-mig_7 	42 ans 	(7617€)
-mig_8 	89 ans 	(1752€)
-mig_9 	52 ans 	(1251€)
-mig_10 	60 ans 	(6130€)
-mig_11 	27 ans 	(3289€)
-mig_12 	26 ans 	(3003€)
-mig_13 	25 ans 	(7265€)
-mig_14 	74 ans 	(7313€)
-mig_15 	88 ans 	(1973€)
-mig_16 	70 ans 	(2066€)
-mig_17 	91 ans 	(4490€)
+mig->18 habitants : mig_0 	50 ans 	(4424.46€)
+mig_1 	64 ans 	(7592.61€)
+mig_2 	7 ans 	(0€)
+mig_3 	45 ans 	(2340.25€)
+mig_4 	17 ans 	(0€)
+mig_5 	80 ans 	(2359.18€)
+mig_6 	67 ans 	(7065.58€)
+mig_7 	52 ans 	(4409.51€)
+mig_8 	80 ans 	(3435.15€)
+mig_9 	98 ans 	(4087.71€)
+mig_10 	24 ans 	(8586.89€)
+mig_11 	66 ans 	(1541.24€)
+mig_12 	79 ans 	(8285.02€)
+mig_13 	52 ans 	(2342.24€)
+mig_14 	55 ans 	(4040.89€)
+mig_15 	3 ans 	(0€)
+mig_16 	78 ans 	(8283.03€)
+mig_17 	3 ans 	(0€)
+inflation : -0.372549%
 connectivité : 
-0 
-Fin du processus 3
-
 
 ====================================
-       PROCESSUS 3 itération: 1
+       PROCESSUS 2 itération: 1
 ====================================
 
 ====================================
@@ -212,94 +215,109 @@ Fin du processus 3
        PROCESSUS 0
 ====================================
 1 iles dans ce monde :
-taa->20 habitants : taa_0 	44 ans 	(8402€)
+taa->20 habitants : taa_0 	43 ans 	(2793.07€)
+taa_1 	35 ans 	(8424.87€)
+taa_2 	92 ans 	(6491.36€)
+taa_3 	52 ans 	(9207.01€)
+taa_4 	53 ans 	(3721.12€)
+0 
+Fin du processus 3
+
 
 ====================================
-       PROCESSUS 2 itération: 1
+       PROCESSUS 3 itération: 1
 ====================================
-taa_1 	46 ans 	(5923€)
-taa_2 	85 ans 	(3725€)
-taa_3 	22 ans 	(1024€)
-taa_4 	19 ans 	(6220€)
-taa_5 	100 ans 	(7215€)
-taa_6 	33 ans 	(4252€)
-taa_7 	41 ans 	(7557€)
-taa_8 	75 ans 	(1896€)
-taa_9 	37 ans 	(7301€)
-taa_10 	47 ans 	(2072€)
-taa_11 	94 ans 	(7101€)
-taa_12 	79 ans 	(6778€)
-taa_13 	44 ans 	(4766€)
-taa_14 	92 ans 	(8901€)
-taa_15 	39 ans 	(9201€)
-taa_16 	45 ans 	(6279€)
-taa_17 	38 ans 	(6182€)
-taa_18 	60 ans 	(7305€)
-taa_19 	38 ans 	(7793€)
+taa_5 	78 ans 	(6925.11€)
+taa_6 	95 ans 	(8225.37€)
+taa_7 	95 ans 	(2941.96€)
+taa_8 	101 ans 	(1408.45€)
+taa_9 	16 ans 	(0€)
+taa_10 	8 ans 	(0€)
+taa_11 	81 ans 	(1892.82€)
+taa_12 	62 ans 	(2121.11€)
+taa_13 	36 ans 	(7409.48€)
+taa_14 	26 ans 	(8136.04€)
+taa_15 	25 ans 	(7067.05€)
+taa_16 	41 ans 	(3943.45€)
+taa_17 	63 ans 	(4082.41€)
+taa_18 	80 ans 	(6635.28€)
+taa_19 	85 ans 	(3266.52€)
+inflation : -0.372549%
 connectivité : 
 0 
+Fin du processus 0
+
 
 ====================================
        PROCESSUS 1
 ====================================
 1 iles dans ce monde :
-Fin du processus 0
-
-fas->10 habitants : fas_0 	88 ans 	(3653€)
-fas_1 	69 ans 	(7271€)
-fas_2 	21 ans 	(3739€)
-fas_3 	17 ans 	(0€)
-fas_4 	71 ans 	(2790€)
-fas_5 	43 ans 	(2933€)
-fas_6 	35 ans 	(2795€)
-fas_7 	67 ans 	(6940€)
-fas_8 	79 ans 	(3286€)
-fas_9 	45 ans 	(1406€)
+fas->10 habitants : fas_0 	21 ans 	(6389.13€)
+fas_1 	29 ans 	(7961.35€)
+fas_2 	102 ans 	(8855.65€)
+fas_3 	31 ans 	(8401.05€)
+fas_4 	102 ans 	(3304.24€)
+fas_5 	93 ans 	(7927.6€)
+fas_6 	38 ans 	(4258.09€)
+fas_7 	16 ans 	(0€)
+fas_8 	88 ans 	(2380.17€)
+fas_9 	59 ans 	(3998.04€)
+inflation : -0.372549%
 connectivité : 
+0 
 
 ====================================
        PROCESSUS 2
 ====================================
 1 iles dans ce monde :
-bop->5 habitants : bop_0 	13 ans 	(0€)
-0 
 Fin du processus 1
 
-bop_1 	95 ans 	(4712€)
-bop_2 	64 ans 	(1043€)
-bop_3 	52 ans 	(8253€)
+bop->5 habitants : bop_0 	33 ans 	(1669.49€)
+bop_1 	82 ans 	(1681.4€)
+bop_2 	33 ans 	(2006.96€)
+bop_3 	39 ans 	(2666.02€)
+bop_4 	66 ans 	(9360.86€)
+inflation : -0.372549%
+connectivité : 
+0 
+Fin du processus 2
+
 
 ====================================
        PROCESSUS 3
 ====================================
 1 iles dans ce monde :
-mig->18 habitants : mig_0 	16 ans bop_4 	36 ans 	(1886€)
-connectivité : 
-0 
-Fin du processus 2
-
-	(0€)
-mig_1 	44 ans 	(4031€)
-mig_2 	53 ans 	(9556€)
-mig_3 	65 ans 	(6631€)
-mig_4 	43 ans 	(4791€)
-mig_5 	58 ans 	(2736€)
-mig_6 	67 ans 	(5452€)
-mig_7 	43 ans 	(7617€)
-mig_8 	90 ans 	(1752€)
-mig_9 	53 ans 	(1251€)
-mig_10 	61 ans 	(6130€)
-mig_11 	28 ans 	(3289€)
-mig_12 	27 ans 	(3003€)
-mig_13 	26 ans 	(7265€)
-mig_14 	75 ans 	(7313€)
-mig_15 	89 ans 	(1973€)
-mig_16 	71 ans 	(2066€)
-mig_17 	92 ans 	(4490€)
+mig->18 habitants : mig_0 	51 ans 	(4407.97€)
+mig_1 	65 ans 	(7564.32€)
+mig_2 	8 ans 	(0€)
+mig_3 	46 ans 	(2331.53€)
+mig_4 	18 ans 	(1271€)
+mig_5 	81 ans 	(2350.39€)
+mig_6 	68 ans 	(7039.26€)
+mig_7 	53 ans 	(4393.08€)
+mig_8 	81 ans 	(3422.36€)
+mig_9 	99 ans 	(4072.49€)
+mig_10 	25 ans 	(8554.9€)
+mig_11 	67 ans 	(1535.49€)
+mig_12 	80 ans 	(8254.15€)
+mig_13 	53 ans 	(2333.52€)
+mig_14 	56 ans 	(4025.84€)
+mig_15 	4 ans 	(0€)
+mig_16 	79 ans 	(8252.17€)
+mig_17 	4 ans 	(0€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 3
 
+
+====================================
+       PROCESSUS 2 itération: 2
+====================================
+
+====================================
+       PROCESSUS 1 itération: 2
+====================================
 
 ====================================
        PROCESSUS 0 itération: 2
@@ -310,142 +328,139 @@ Fin du processus 3
 ====================================
 
 ====================================
-       PROCESSUS 1 itération: 2
-====================================
-
-====================================
-       PROCESSUS 2 itération: 2
-====================================
-
-====================================
        PROCESSUS 0
 ====================================
 1 iles dans ce monde :
-taa->20 habitants : taa_0 	45 ans 	(8402€)
-taa_1 	47 ans 	(5923€)
-taa_2 	86 ans 	(3725€)
-taa_3 	23 ans 	(1024€)
-taa_4 	20 ans 	(6220€)
-taa_5 	101 ans 	(7215€)
-taa_6 	34 ans 	(4252€)
-taa_7 	42 ans 	(7557€)
-taa_8 	76 ans 	(1896€)
-taa_9 	38 ans 	(7301€)
-taa_10 	48 ans 	(2072€)
-taa_11 	95 ans 	(7101€)
-taa_12 	80 ans 	(6778€)
-taa_13 	45 ans 	(4766€)
-taa_14 	93 ans 	(8901€)
-taa_15 	40 ans 	(9201€)
-taa_16 	46 ans 	(6279€)
-taa_17 	39 ans 	(6182€)
-taa_18 	61 ans 	(7305€)
-taa_19 	39 ans 	(7793€)
+taa->20 habitants : taa_0 	44 ans 	(2782.67€)
+taa_1 	36 ans 	(8393.49€)
+taa_2 	93 ans 	(6467.18€)
+taa_3 	53 ans 	(9172.71€)
+taa_4 	54 ans 	(3707.26€)
+taa_5 	79 ans 	(6899.31€)
+taa_6 	96 ans 	(8194.73€)
+taa_7 	96 ans 	(2931€)
+taa_8 	102 ans 	(1403.2€)
+taa_9 	17 ans 	(0€)
+taa_10 	9 ans 	(0€)
+taa_11 	82 ans 	(1885.77€)
+taa_12 	63 ans 	(2113.2€)
+taa_13 	37 ans 	(7381.88€)
+taa_14 	27 ans 	(8105.73€)
+taa_15 	26 ans 	(7040.72€)
+taa_16 	42 ans 	(3928.76€)
+taa_17 	64 ans 	(4067.2€)
+taa_18 	81 ans 	(6610.56€)
+taa_19 	86 ans 	(3254.36€)
+inflation : -0.372549%
+connectivité : 
+0 
+Fin du processus 0
+
 
 ====================================
        PROCESSUS 1
 ====================================
 1 iles dans ce monde :
+fas->10 habitants : fas_0 	22 ans 	(6365.32€)
+fas_1 	30 ans 	(7931.69€)
+fas_2 	103 ans 	(8822.65€)
+fas_3 	32 ans 	(8369.75€)
+fas_4 	103 ans 	(3291.93€)
+fas_5 	94 ans 	(7898.07€)
+fas_6 	39 ans 	(4242.23€)
+fas_7 	17 ans 	(0€)
+fas_8 	89 ans 	(2371.3€)
+fas_9 	60 ans 	(3983.15€)
+inflation : -0.372549%
 connectivité : 
 0 
-Fin du processus 0
+Fin du processus 1
 
-fas->10 habitants : fas_0 	89 ans 	(3653€)
-fas_1 	70 ans 	(7271€)
-fas_2 	22 ans 	(3739€)
-fas_3 	18 ans 	(8550€)
-fas_4 	72 ans 	(2790€)
-fas_5 	44 ans 	(2933€)
-fas_6 	36 ans 	(2795€)
-fas_7 	68 ans 	(6940€)
-fas_8 	80 ans 	(3286€)
 
 ====================================
        PROCESSUS 2
 ====================================
 1 iles dans ce monde :
-bop->5 habitants : bop_0 	14 ans 	(0€)
-bop_1 	96 ans 	(4712€)
-bop_2 	65 ans 	(1043€)
-bop_3 	53 ans fas_9 	46 ans 	(1406€)
-connectivité : 
-0 
-Fin du processus 1
-
-	(8253€)
-bop_4 	37 ans 	(1886€)
-connectivité : 
-0 
-Fin du processus 2
-
+bop->5 habitants : bop_0 	34 ans 	(1663.27€)
+bop_1 	83 ans 	(1675.14€)
+bop_2 	34 ans 	(1999.49€)
+bop_3 	40 ans 	(2656.09€)
+bop_4 	67 ans 	(9325.99€)
 
 ====================================
        PROCESSUS 3
 ====================================
-1 iles dans ce monde :
-mig->18 habitants : mig_0 	17 ans 	(0€)
-mig_1 	45 ans 	(4031€)
-mig_2 	54 ans 	(9556€)
-mig_3 	66 ans 	(6631€)
-mig_4 	44 ans 	(4791€)
-mig_5 	59 ans 	(2736€)
-mig_6 	68 ans 	(5452€)
-mig_7 	44 ans 	(7617€)
-mig_8 	91 ans 	(1752€)
-mig_9 	54 ans 	(1251€)
-mig_10 	62 ans 	(6130€)
-mig_11 	29 ans 	(3289€)
-mig_12 	28 ans 	(3003€)
-mig_13 	27 ans 	(7265€)
-mig_14 	76 ans 	(7313€)
-mig_15 	90 ans 	(1973€)
-mig_16 	72 ans 	(2066€)
-mig_17 	93 ans 	(4490€)
+inflation : -0.372549%
 connectivité : 
 0 
+Fin du processus 2
 
-====================================
-       PROCESSUS 0 itération: 3
-====================================
-
-====================================
-       PROCESSUS 1 itération: 3
-====================================
+1 iles dans ce monde :
+mig->18 habitants : mig_0 	52 ans 	(4391.55€)
+mig_1 	66 ans 	(7536.14€)
+mig_2 	9 ans 	(0€)
+mig_3 	47 ans 	(2322.84€)
+mig_4 	19 ans 	(1266.26€)
+mig_5 	82 ans 	(2341.63€)
+mig_6 	69 ans 	(7013.03€)
+mig_7 	54 ans 	(4376.72€)
+mig_8 	82 ans 	(3409.61€)
+mig_9 	100 ans 	(4057.31€)
+mig_10 	26 ans 	(8523.03€)
+mig_11 	68 ans 	(1529.77€)
+mig_12 	81 ans 	(8223.4€)
+mig_13 	54 ans 	(2324.82€)
+mig_14 	57 ans 	(4010.84€)
+mig_15 	5 ans 	(0€)
+mig_16 	80 ans 	(8221.42€)
+mig_17 	5 ans 	(0€)
+inflation : -0.372549%
+connectivité : 
+0 
 Fin du processus 3
 
-
-====================================
-       PROCESSUS 3 itération: 3
-====================================
 
 ====================================
        PROCESSUS 2 itération: 3
 ====================================
 
 ====================================
+       PROCESSUS 1 itération: 3
+====================================
+
+====================================
+       PROCESSUS 0 itération: 3
+====================================
+
+====================================
        PROCESSUS 0
 ====================================
+
+====================================
+       PROCESSUS 3 itération: 3
+====================================
 1 iles dans ce monde :
-taa->20 habitants : taa_0 	46 ans 	(8402€)
-taa_1 	48 ans 	(5923€)
-taa_2 	87 ans 	(3725€)
-taa_3 	24 ans 	(1024€)
-taa_4 	21 ans 	(6220€)
-taa_5 	102 ans 	(7215€)
-taa_6 	35 ans 	(4252€)
-taa_7 	43 ans 	(7557€)
-taa_8 	77 ans 	(1896€)
-taa_9 	39 ans 	(7301€)
-taa_10 	49 ans 	(2072€)
-taa_11 	96 ans 	(7101€)
-taa_12 	81 ans 	(6778€)
-taa_13 	46 ans 	(4766€)
-taa_14 	94 ans 	(8901€)
-taa_15 	41 ans 	(9201€)
-taa_16 	47 ans 	(6279€)
-taa_17 	40 ans 	(6182€)
-taa_18 	62 ans 	(7305€)
-taa_19 	40 ans 	(7793€)
+taa->20 habitants : taa_0 	45 ans 	(2772.3€)
+taa_1 	37 ans 	(8362.22€)
+taa_2 	94 ans 	(6443.08€)
+taa_3 	54 ans 	(9138.54€)
+taa_4 	55 ans 	(3693.44€)
+taa_5 	80 ans 	(6873.61€)
+taa_6 	97 ans 	(8164.2€)
+taa_7 	97 ans 	(2920.08€)
+taa_8 	103 ans 	(1397.97€)
+taa_9 	18 ans 	(5960€)
+taa_10 	10 ans 	(0€)
+taa_11 	83 ans 	(1878.74€)
+taa_12 	64 ans 	(2105.33€)
+taa_13 	38 ans 	(7354.38€)
+taa_14 	28 ans 	(8075.53€)
+taa_15 	27 ans 	(7014.49€)
+taa_16 	43 ans 	(3914.12€)
+taa_17 	65 ans 	(4052.05€)
+taa_18 	82 ans 	(6585.94€)
+taa_19 	87 ans 	(3242.23€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 0
@@ -455,30 +470,32 @@ Fin du processus 0
        PROCESSUS 1
 ====================================
 1 iles dans ce monde :
-fas->10 habitants : fas_0 	90 ans 	(3653€)
-fas_1 	71 ans 	(7271€)
-fas_2 	23 ans 	(3739€)
-fas_3 	19 ans 	(8550€)
-fas_4 	73 ans 	(2790€)
-fas_5 	45 ans 	(2933€)
-fas_6 	37 ans 	(2795€)
-fas_7 	69 ans 	(6940€)
-fas_8 	81 ans 	(3286€)
-fas_9 	47 ans 	(1406€)
+fas->10 habitants : fas_0 	23 ans 	(6341.61€)
+fas_1 	31 ans 	(7902.14€)
+fas_2 	104 ans 	(8789.79€)
+fas_3 	33 ans 	(8338.57€)
+fas_4 	104 ans 	(3279.67€)
+fas_5 	95 ans 	(7868.64€)
+fas_6 	40 ans 	(4226.43€)
+fas_7 	18 ans 	(2647€)
+fas_8 	90 ans 	(2362.46€)
+fas_9 	61 ans 	(3968.31€)
+inflation : -0.372549%
 connectivité : 
 0 
-Fin du processus 1
-
 
 ====================================
        PROCESSUS 2
+Fin du processus 1
+
 ====================================
 1 iles dans ce monde :
-bop->5 habitants : bop_0 	15 ans 	(0€)
-bop_1 	97 ans 	(4712€)
-bop_2 	66 ans 	(1043€)
-bop_3 	54 ans 	(8253€)
-bop_4 	38 ans 	(1886€)
+bop->5 habitants : bop_0 	35 ans 	(1657.07€)
+bop_1 	84 ans 	(1668.9€)
+bop_2 	35 ans 	(1992.04€)
+bop_3 	41 ans 	(2646.2€)
+bop_4 	68 ans 	(9291.24€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 2
@@ -488,38 +505,40 @@ Fin du processus 2
        PROCESSUS 3
 ====================================
 1 iles dans ce monde :
-mig->18 habitants : mig_0 	18 ans 	(3556€)
-mig_1 	46 ans 	(4031€)
-mig_2 	55 ans 	(9556€)
-mig_3 	67 ans 	(6631€)
-mig_4 	45 ans 	(4791€)
-mig_5 	60 ans 	(2736€)
-mig_6 	69 ans 	(5452€)
-mig_7 	45 ans 	(7617€)
-mig_8 	92 ans 	(1752€)
-mig_9 	55 ans 	(1251€)
-mig_10 	63 ans 	(6130€)
-mig_11 	30 ans 	(3289€)
-mig_12 	29 ans 	(3003€)
-mig_13 	28 ans 	(7265€)
-mig_14 	77 ans 	(7313€)
-mig_15 	91 ans 	(1973€)
-mig_16 	73 ans 	(2066€)
-mig_17 	94 ans 	(4490€)
+mig->18 habitants : mig_0 	53 ans 	(4375.19€)
+mig_1 	67 ans 	(7508.07€)
+mig_2 	10 ans 	(0€)
+mig_3 	48 ans 	(2314.19€)
+mig_4 	20 ans 	(1261.55€)
+mig_5 	83 ans 	(2332.91€)
+mig_6 	70 ans 	(6986.9€)
+mig_7 	55 ans 	(4360.41€)
+mig_8 	83 ans 	(3396.9€)
+mig_9 	101 ans 	(4042.2€)
+mig_10 	27 ans 	(8491.28€)
+mig_11 	69 ans 	(1524.08€)
+mig_12 	82 ans 	(8192.77€)
+mig_13 	55 ans 	(2316.16€)
+mig_14 	58 ans 	(3995.89€)
+mig_15 	6 ans 	(0€)
+mig_16 	81 ans 	(8190.8€)
+mig_17 	6 ans 	(0€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 3
 
 
 ====================================
+       PROCESSUS 1 itération: 4
+====================================
+
+====================================
        PROCESSUS 0 itération: 4
 ====================================
 
 ====================================
-
-====================================
-       PROCESSUS 1 itération: 4
-====================================
+       PROCESSUS 0
 
 ====================================
        PROCESSUS 3 itération: 4
@@ -528,48 +547,49 @@ Fin du processus 3
 ====================================
        PROCESSUS 2 itération: 4
 ====================================
-       PROCESSUS 0
 ====================================
 1 iles dans ce monde :
-taa->20 habitants : taa_0 	47 ans 	(8402€)
-taa_1 	49 ans 	(5923€)
-taa_2 	88 ans 	(3725€)
-taa_3 	25 ans 	(1024€)
-taa_4 	22 ans 	(6220€)
-taa_5 	103 ans 	(7215€)
-taa_6 	36 ans 	(4252€)
-taa_7 	44 ans 	(7557€)
-taa_8 	78 ans 	(1896€)
-taa_9 	40 ans 	(7301€)
-taa_10 	50 ans 	(2072€)
-taa_11 	97 ans 	(7101€)
-taa_12 	82 ans 	(6778€)
-taa_13 	47 ans 	(4766€)
-taa_14 	95 ans 	(8901€)
-taa_15 	42 ans 	(9201€)
-taa_16 	48 ans 	(6279€)
-taa_17 	41 ans 	(6182€)
-taa_18 	63 ans 	(7305€)
-taa_19 	41 ans 	(7793€)
+taa->20 habitants : taa_0 	46 ans 	(2761.97€)
+taa_1 	38 ans 	(8331.06€)
+taa_2 	95 ans 	(6419.08€)
+taa_3 	55 ans 	(9104.49€)
+taa_4 	56 ans 	(3679.68€)
+taa_5 	81 ans 	(6848€)
+taa_6 	98 ans 	(8133.78€)
+taa_7 	98 ans 	(2909.2€)
+taa_8 	104 ans 	(1392.76€)
+taa_9 	19 ans 	(5937.8€)
+taa_10 	11 ans 	(0€)
+taa_11 	84 ans 	(1871.74€)
+taa_12 	65 ans 	(2097.49€)
+taa_13 	39 ans 	(7326.98€)
+taa_14 	29 ans 	(8045.44€)
+taa_15 	28 ans 	(6988.36€)
+taa_16 	44 ans 	(3899.54€)
+taa_17 	66 ans 	(4036.95€)
+taa_18 	83 ans 	(6561.4€)
+taa_19 	88 ans 	(3230.15€)
+inflation : -0.372549%
 connectivité : 
+0 
+Fin du processus 0
+
 
 ====================================
        PROCESSUS 1
 ====================================
-0 
-Fin du processus 0
-
 1 iles dans ce monde :
-fas->10 habitants : fas_0 	91 ans 	(3653€)
-fas_1 	72 ans 	(7271€)
-fas_2 	24 ans 	(3739€)
-fas_3 	20 ans 	(8550€)
-fas_4 	74 ans 	(2790€)
-fas_5 	46 ans 	(2933€)
-fas_6 	38 ans 	(2795€)
-fas_7 	70 ans 	(6940€)
-fas_8 	82 ans 	(3286€)
-fas_9 	48 ans 	(1406€)
+fas->10 habitants : fas_0 	24 ans 	(6317.99€)
+fas_1 	32 ans 	(7872.7€)
+fas_2 	105 ans 	(8757.04€)
+fas_3 	34 ans 	(8307.51€)
+fas_4 	105 ans 	(3267.45€)
+fas_5 	96 ans 	(7839.33€)
+fas_6 	41 ans 	(4210.68€)
+fas_7 	19 ans 	(2637.14€)
+fas_8 	91 ans 	(2353.66€)
+fas_9 	62 ans 	(3953.53€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 1
@@ -579,11 +599,12 @@ Fin du processus 1
        PROCESSUS 2
 ====================================
 1 iles dans ce monde :
-bop->5 habitants : bop_0 	16 ans 	(0€)
-bop_1 	98 ans 	(4712€)
-bop_2 	67 ans 	(1043€)
-bop_3 	55 ans 	(8253€)
-bop_4 	39 ans 	(1886€)
+bop->5 habitants : bop_0 	36 ans 	(1650.9€)
+bop_1 	85 ans 	(1662.68€)
+bop_2 	36 ans 	(1984.61€)
+bop_3 	42 ans 	(2636.34€)
+bop_4 	69 ans 	(9256.63€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 2
@@ -593,24 +614,25 @@ Fin du processus 2
        PROCESSUS 3
 ====================================
 1 iles dans ce monde :
-mig->18 habitants : mig_0 	19 ans 	(3556€)
-mig_1 	47 ans 	(4031€)
-mig_2 	56 ans 	(9556€)
-mig_3 	68 ans 	(6631€)
-mig_4 	46 ans 	(4791€)
-mig_5 	61 ans 	(2736€)
-mig_6 	70 ans 	(5452€)
-mig_7 	46 ans 	(7617€)
-mig_8 	93 ans 	(1752€)
-mig_9 	56 ans 	(1251€)
-mig_10 	64 ans 	(6130€)
-mig_11 	31 ans 	(3289€)
-mig_12 	30 ans 	(3003€)
-mig_13 	29 ans 	(7265€)
-mig_14 	78 ans 	(7313€)
-mig_15 	92 ans 	(1973€)
-mig_16 	74 ans 	(2066€)
-mig_17 	95 ans 	(4490€)
+mig->18 habitants : mig_0 	54 ans 	(4358.89€)
+mig_1 	68 ans 	(7480.09€)
+mig_2 	11 ans 	(0€)
+mig_3 	49 ans 	(2305.57€)
+mig_4 	21 ans 	(1256.85€)
+mig_5 	84 ans 	(2324.22€)
+mig_6 	71 ans 	(6960.87€)
+mig_7 	56 ans 	(4344.17€)
+mig_8 	84 ans 	(3384.25€)
+mig_9 	102 ans 	(4027.14€)
+mig_10 	28 ans 	(8459.64€)
+mig_11 	70 ans 	(1518.4€)
+mig_12 	83 ans 	(8162.24€)
+mig_13 	56 ans 	(2307.53€)
+mig_14 	59 ans 	(3981.01€)
+mig_15 	7 ans 	(0€)
+mig_16 	82 ans 	(8160.28€)
+mig_17 	7 ans 	(0€)
+inflation : -0.372549%
 connectivité : 
 0 
 Fin du processus 3

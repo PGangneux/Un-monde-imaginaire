@@ -7,6 +7,7 @@ void affichage_ile(struct ile* ile) {
         affichage_habitant(ile->liste_hab[i]);
         cout << endl;
     }
+    cout << "inflation : " << ile->inflation << endl;
 }
 
 void affichage_monde(struct monde* m) {
