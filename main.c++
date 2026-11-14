@@ -3,6 +3,7 @@
 #include <cstring>
 #include <string>
 #include <ctime>
+#include <cmath>
 #include <mpi.h>
 #include "monde.hpp"
 
@@ -59,7 +60,7 @@ struct monde* generation(const char* filename) {
 
 
 // On prend un pointeur sur l'île pour modifier directement la vraie île
-void creation_habitant(struct ile* ile_ptr) {
+void creation_habitants(struct ile* ile_ptr) {
     ile_ptr->liste_hab = new habitant*[ile_ptr->nb_hab];
 
     for (int i = 0; i < ile_ptr->nb_hab; i++) {
@@ -71,6 +72,16 @@ void creation_habitant(struct ile* ile_ptr) {
         h->age = rand() % 100 + 1;
         h->revenu = (h->age < 18) ? 0 : 1000 + rand() % 9001;
     }
+}
+
+
+// mets à jour le nom, l'âge et le revenu d'un habitant spécifique sur une île donnée
+// sert pour la mort et la naissance d'un habitant
+void update_habitant(struct ile* ile_ptr, int index){
+    habitant* h = ile_ptr->liste_hab[index];
+    snprintf(h->nom, sizeof(h->nom), "%s_%d", ile_ptr->nom, index);
+    h->age = 0;
+    h->revenu = 0;   
 }
 
 
@@ -105,7 +116,7 @@ struct monde* init_world(struct monde* m, int nb_proc, int pid) {
         sous_monde->mes_iles[i] = (struct ile*)malloc(sizeof(struct ile));
         *(sous_monde->mes_iles[i]) = *(m->mes_iles[debut + i]);   // copie des champs (num, nom, nb_hab...)
         sous_monde->mes_iles[i]->liste_hab = nullptr;             // ne pas partager le tableau de mm
-        creation_habitant(sous_monde->mes_iles[i]);               // alloue liste_hab + habitants
+        creation_habitants(sous_monde->mes_iles[i]);               // alloue liste_hab + habitants
     }
     
     return sous_monde;
@@ -114,16 +125,19 @@ struct monde* init_world(struct monde* m, int nb_proc, int pid) {
 
 
 void niveau1(struct monde* m){
-    // les habitants de chaque île prennent tous un ans
-    // si un habitant a 18 ans, ont initialise son revenu
     for (int i = 0; i < m->nb_iles; i++){
+        ile* ile = m->mes_iles[i];
+
         for (int j = 0; j < m->mes_iles[i]->nb_hab; j++){
-            habitant* h = m->mes_iles[i]->liste_hab[j];
+            habitant* h = ile->liste_hab[j];
+
+
             // habitant prend un ans
             h->age +=1;
 
+
             // idexation du salaires en fonction de l'inflation de l'île
-            double inflation = m->mes_iles[i]->inflation; // en pourcentage
+            double inflation = ile->inflation; // en pourcentage
             h->revenu *= (1 + inflation/100.0);
 
 
@@ -132,6 +146,41 @@ void niveau1(struct monde* m){
                 h->revenu = 1000 + rand() % 9001;
             }
         }
+
+
+        // mortalité/naissance : au + 5% de la population meurt.
+        // Il y a le même nombre de mort que de naissance.
+        double taux_mortalite = (rand() / (double)RAND_MAX) * 0.05;
+        int nb_morts = round(ile->nb_hab * taux_mortalite);
+        //cout << "Taux de mortalité sur l'île " << ile->nom << " : " << taux_mortalite * 100 << "%" << "equivaut à " << ile->nb_hab * taux_mortalite << "morts"  << endl;
+            
+        // On choisit les indice aléatoirement
+        int* indices_morts = (int*)malloc(nb_morts * sizeof(int));
+        for (int i = 0; i < nb_morts; i++) {
+            int indice;
+            int deja_choisi = 1;
+            do {
+                indice = rand() % ile->nb_hab;
+
+                // Vérifier que cet indice n'a pas déjà été choisi
+                deja_choisi = 0;
+                for (int j = 0; j < i; j++) {
+                    if (indices_morts[j] == indice) {
+                        deja_choisi = 1;
+                        break;
+                    }
+                }
+                    
+            } while (deja_choisi);
+
+            indices_morts[i] = indice;
+        }
+
+        // On met à jour les habitants morts
+        for (int i = 0; i < nb_morts; i++) {
+            update_habitant(ile, indices_morts[i]);
+        }
+        free(indices_morts);
     }
 
 
@@ -169,7 +218,7 @@ int main(int argc, char* argv[]) {
     // Initialisation du générateur de nombres aléatoires avec une graine différente pour chaque processus
     srand(time(NULL) + pid);
 
-    struct monde* mm = generation("monde2.txt");
+    struct monde* mm = generation("monde1.txt");
     struct monde* sous_monde = init_world(mm, nb_proc, pid);
     
     show(pid, nb_proc, sous_monde);
