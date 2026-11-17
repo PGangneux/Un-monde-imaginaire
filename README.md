@@ -1,7 +1,11 @@
 # Un-monde-imaginaire
 
-Soit un monde imaginaire compos´e d’un ensemble d’ˆıles partiellement connect´ees par des ponts. Ce monde est
-habit´e par des individus caract´eris´es par un nom, un ˆage et un revenu mensuel. L’objectif du projet est de
-mod´eliser ce monde et de le faire ´evoluer `a partir de diff´erentes r´egles qui vont s’appliquer au fil du temps. Cette
-´evolution va ˆetre it´erative o`u une it´eration repr´esente une ann´ee de vie dans ce monde. Ainsi avant de passer `a
-l’it´eration suivante il faut faire sa mise `a jour selon toutes les r`egles d’´evolution
+## Sujet
+
+Soit un monde imaginaire composé d’un ensemble d’ìles partiellement connectées par des ponts. Ce monde est
+habité par des individus caractérisés par un nom, un âge et un revenu mensuel.
+
+L’objectif du projet est de
+modéliser ce monde et de le faire évoluer à partir de différentes règles qui vont s’appliquer au fil du temps. 
+
+Cette évolution va être itérative où une itération représente une année de vie dans ce monde. Ainsi avant de passer à l’itération suivante il faut faire sa mise à jour selon toutes les règles d’évolution
